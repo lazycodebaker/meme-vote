@@ -55,7 +55,7 @@ const Landing: React.FC<Props> = ({ contractAddress }) => {
 
                   <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 sm:px-16 px-6">
 
-                        <div className='flex items-start flex-col'>
+                        <div className='flex items-center sm:items-start flex-col'>
                               <div className="flex flex-col sm:mt-0 -mt-10 w-full space-y-2 items-center text-gray-50">
                                     <h1 className="sm:text-6xl text-3xl">Cast Your Vote for the Best <span className="text-gradient">Meme</span></h1>
                                     <h1 className="text-lg py-4 sm:pr-14 ">Your vote counts! Choose the most captivating <span className='text-gradient'>memes</span> and help determine the rulers of the crypto meme realm.</h1>
