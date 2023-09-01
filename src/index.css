@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Quantico';
+  src: local('Quantico'), url(./fonts/Quantico-Bold.ttf) format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quantico', sans-serif;
+  user-select: none;
+}
+
+body {
+  background-color: #0E1418;
+  overflow-x: hidden;
+}
+
+.shadow-button {
+  box-shadow: -0px 0px 48px 0px rgb(12, 140, 94);
+}
+
+.text-gradient {
+  background: rgb(21, 186, 165);
+  background: linear-gradient(90deg, rgba(21, 186, 165, 1) 0%, rgba(37, 201, 148, 1) 50%, rgba(73, 222, 128, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.circle-gradient {
+  box-shadow: 10px 10px 10px 10px linear-gradient(90deg, rgba(21, 186, 165, 1) 0%, rgba(37, 201, 148, 1) 50%, rgba(73, 222, 128, 1) 100%);
+}
+
+.timer { 
+  background: linear-gradient(90deg, rgba(21, 186, 165, 0.7) 0%, rgba(37, 201, 148, 0.7) 50%, rgba(73, 222, 128, 0.7) 100%);
+  box-shadow: inset 0px 37px 32px 0px rgb(21, 186, 165);
+}
+
+
+.buttonborder {
+  --border-width : 1px;
+  border-width: var(--border-width);
+  background: linear-gradient(90deg, rgba(21, 186, 165, 1) 0%, rgba(37, 201, 148, 1) 50%, rgba(73, 222, 128, 1) 100%);
+  border-radius:  10px 10px 0 0;
+}
+
+.buttonbordercustom{
+  position: relative;
+  z-index: 1;
+}
+
+.buttonborder::before {
+  content: '';
+  display: block;
+  background-color: black;
+  position: absolute;
+  width: calc(100% - calc(var(--border-width) ));
+  height: calc(100% - calc(var(--border-width)));
+  top: var(--border-width);
+  left: var(--border-width);
+  z-index: -1;
+  border-radius:  10px 10px 0 0;
+}
+
+.buttonborderbottom{
+  border-radius:  0 0 10px 10px;
+  border-top:  none;
+}
+
+.buttonborderbottom::before{
+  border-top: none;
+  border-radius:  0 0 10px 10px;
+}
+
+.text-input {
+  border-radius: 7px 0 0 7px;
+  background: rgba(0,0,0,0.5);
+}
+
+.text-input::before{
+  border-radius: 7px 0 0 7px;
+  background: rgba(0,0,0,0.5);
+}
+
+.send{
+  border-radius: 0 7px 7px 0;
+  border-left: none;
+  background: rgba(0,0,0,0.5);
+}
+
+.send::before{
+  border-radius: 0 7px 7px 0;
+  border-left: none;
+  background: rgba(0,0,0,0.5);
+}
